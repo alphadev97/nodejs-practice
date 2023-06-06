@@ -1,0 +1,3 @@
+Hi, My name is Usama
+
+Testing promiseWrite promise
