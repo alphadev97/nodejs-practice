@@ -39,3 +39,14 @@
 20230608	01:50:35	4e370068-c9e6-4001-8fac-db3ffe3b2de5	GET	undefined	/css/style.css
 20230608	01:51:02	4e7031ed-6caf-4997-b23a-130824dd59eb	GET	undefined	/
 20230608	01:51:02	e59d6f6c-54ae-4ade-ba59-e02f05d9a482	GET	undefined	/css/style.css
+20230608	23:27:52	722331d8-a947-4361-a27c-3e93cb2d45f4	GET	undefined	/
+20230608	23:27:52	149b97e5-69b2-4b55-baff-5d50376ae451	GET	undefined	/css/style.css
+20230608	23:27:54	9365a416-84a3-4126-97a6-b251d9dafff5	GET	undefined	/favicon.ico
+20230608	23:27:57	8b15f4a3-d4f9-431d-a077-e5a3a2ecb517	GET	undefined	/
+20230608	23:27:57	1a7cfcf7-3a07-472c-a63f-ce8a772ff2f3	GET	undefined	/css/style.css
+20230608	23:28:42	9b20e33f-6a41-4ff2-9521-6a1e7a0a1048	GET	undefined	/subdir
+20230608	23:29:05	719c0dc3-a2cc-4262-b1f7-f595543b4d7a	GET	undefined	/subdir/test
+20230608	23:29:18	032244a2-58c8-4f17-85b8-c4b07ec0f24c	GET	undefined	/subdir/new
+20230608	23:29:18	a9dd6671-44f4-470a-a3f1-bd8660af6bf2	GET	undefined	/subdir/css/style.css
+20230608	23:30:32	7548672f-3ec5-49d4-99d1-1c4b2654371e	GET	undefined	/subdir/new
+20230608	23:30:32	9969b267-0225-412d-b7a4-d0e0872a3cd3	GET	undefined	/subdir/css/style.css
