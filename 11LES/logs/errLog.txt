@@ -1,0 +1,3 @@
+20230607	22:35:40	306a0fe1-7e3c-4581-87b0-f75221dd804a	TypeError: fsPromises.readFil is not a function
+20230608	01:45:08	5a1b5ddf-2832-4124-8492-f403abb25929	Error: Not allowed by CORS
+20230613	06:51:12	86660ac6-aa87-44f6-ae51-c30be5299959	SyntaxError: Unexpected token u in JSON at position 2
