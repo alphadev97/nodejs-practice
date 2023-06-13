@@ -6,6 +6,7 @@ const corsOptions = require("./config/corsOptions");
 const { logger } = require("./middleware/logEvents");
 const errorHandler = require("./middleware/errorHandler");
 const verifyJWT = require("./middleware/verifyJWT");
+const cookieParser = require("cookie-parser");
 const PORT = process.env.PORT || 3500;
 
 // custom middleware logger
@@ -20,6 +21,10 @@ app.use(express.urlencoded({ extended: false }));
 
 // built-in middleware for json
 app.use(express.json());
+
+// meddileware for cookies
+
+app.use(cookieParser());
 
 // serve static files
 app.use(express.static(path.join(__dirname, "/public")));
