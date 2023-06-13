@@ -20,20 +20,16 @@ const handleLogout = (req, res) => {
     (person) => person.refreshToken === refreshToken
   );
 
-  if (!foundUser) return res.sendStatus(403); //Forbidden
+  if (!foundUser) {
+    res.clearCookie("jwt", { httpOnly: true, maxAge: 24 * 60 * 60 * 1000 });
+    return res.sendStatus(204);
+  }
 
-  // Evaluate Jwt
+  // Delete refreshToken in db
 
-  jwt.verify(refreshToken, process.env.REFRESH_TOKEN_SECRET, (err, decoded) => {
-    if (err || foundUser.username !== decoded.username)
-      return res.sendStatus(403);
-    const accessToken = jwt.sign(
-      { username: decoded.username },
-      process.env.ACCESS_TOKEN_SECRET,
-      { expiresIn: "30s" }
-    );
-    res.json({ accessToken });
-  });
+  const otherUsers = usersDB.users.filter(
+    (person) => person.refreshToken !== foundUser.refreshToken
+  );
 };
 
 module.exports = { handleRefreshToken };
