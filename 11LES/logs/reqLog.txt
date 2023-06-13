@@ -92,3 +92,9 @@
 20230613	23:04:06	09e66924-8ce2-45ac-bc79-d4b4215395f6	GET	undefined	/employees
 20230613	23:04:43	0af0dcd2-b689-4426-9857-6791a5ff63f2	GET	undefined	/employees
 20230613	23:05:09	a71e32a9-e119-47b7-b3b4-d7663bcb669f	POST	undefined	/employees
+20230614	00:33:00	8366307a-002a-426a-aa00-09e0df6328fd	POST	undefined	/auth
+20230614	00:34:04	9a4d4ec1-2ebc-49de-80ed-191d1b8d9962	GET	undefined	/refresh
+20230614	00:35:00	516e9f6f-039c-48eb-878f-adb5474739b2	GET	undefined	/refresh
+20230614	00:35:50	1cdb7f14-ad3a-4f1c-8d72-5c28f9fe49a2	GET	undefined	/refresh
+20230614	00:35:54	254802d4-8bed-4540-b781-887536a12d36	GET	undefined	/refresh
+20230614	00:37:30	0a5735c2-0908-4f76-8386-34ab19f34c3e	GET	undefined	/refresh
