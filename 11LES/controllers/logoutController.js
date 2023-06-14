@@ -30,6 +30,14 @@ const handleLogout = (req, res) => {
   const otherUsers = usersDB.users.filter(
     (person) => person.refreshToken !== foundUser.refreshToken
   );
+  const currentUser = { ...foundUser, refreshToken: "" };
+  usersDB.setUsers([...otherUsers, currentUser]);
+  await fsPromises.writeFile(
+    path.join(__dirname, '..', 'model', 'users.json'),
+    JSON.stringify(usersDB.users)
+  );
+
+  res.clearCookie('jwt', {httpOnly: true, maxAge: 24 * 60 * 60 * 1000}) // secure: true - only serves on https
 };
 
 module.exports = { handleRefreshToken };
