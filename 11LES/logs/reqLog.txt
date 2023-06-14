@@ -98,3 +98,8 @@
 20230614	00:35:50	1cdb7f14-ad3a-4f1c-8d72-5c28f9fe49a2	GET	undefined	/refresh
 20230614	00:35:54	254802d4-8bed-4540-b781-887536a12d36	GET	undefined	/refresh
 20230614	00:37:30	0a5735c2-0908-4f76-8386-34ab19f34c3e	GET	undefined	/refresh
+20230614	20:51:31	ebb6655f-e8e8-4d3c-a146-349d42ad5ec6	POST	undefined	/auth
+20230614	20:52:13	e5bc449f-a53e-474f-ad37-3885c9dcd77c	GET	undefined	/logout
+20230614	20:52:49	c2f84593-cdeb-49bf-b863-cb499a5ecf61	GET	undefined	/refresh
+20230614	20:54:18	f35bde14-4430-42e0-88a1-ab2784098e2f	GET	undefined	/refresh
+20230614	20:54:57	c5472d5d-51b1-4462-85d0-2dd2c7586fb2	POST	undefined	/auth
