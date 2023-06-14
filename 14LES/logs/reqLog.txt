@@ -31,3 +31,6 @@
 20230614	22:39:18	607066ab-5b38-4533-bcd6-520df07ea1e3	POST	undefined	/auth
 20230614	22:39:27	9ff47edf-18e9-477e-a445-48da9baba55c	POST	undefined	/employees
 20230614	22:39:32	b653932a-fd1c-4b48-8615-8361f04a2d4d	DELETE	undefined	/employees
+20230615	01:27:31	6918c175-c402-4ef5-be8d-cc5fd25cc081	POST	undefined	/auth
+20230615	01:28:39	25441a4b-861c-4aa8-a17f-924d40b132e7	POST	undefined	/register
+20230615	01:29:25	bed11b3d-637a-4797-9997-0602474c3369	POST	undefined	/register
