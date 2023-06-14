@@ -7,7 +7,7 @@
     "start": "node server",
     "dev": "nodemon server"
   },
-  "author": "Dave Gray",
+  "author": "Muhammad Usama",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.1",
@@ -17,6 +17,7 @@
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
+    "mongoose": "^7.2.4",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
