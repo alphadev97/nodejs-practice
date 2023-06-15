@@ -42,3 +42,8 @@
 20230615	02:30:53	0bb4ee9d-6383-4acc-b7ed-bcb298f79c52	GET	undefined	/refresh
 20230615	02:32:17	04dc0825-0300-44ca-9b11-b441fb699b1e	POST	undefined	/auth
 20230615	02:32:48	7dfef035-524b-4c99-81db-84b182f0c1a5	GET	undefined	/logout
+20230615	22:35:05	956cbc48-174a-4045-a040-2c5d4150006f	POST	undefined	/auth
+20230615	22:35:25	f5cb4841-6519-413a-954e-2fbf79c66115	GET	undefined	/employees
+20230615	22:35:57	610259a3-171b-4de5-ba7a-1ed1d26e2c8e	GET	undefined	/employees
+20230615	22:36:01	eeddf709-1702-4da4-b4b8-a0a061706120	POST	undefined	/auth
+20230615	22:36:08	d46b2aa9-b0a3-4316-a549-07e14c729e48	GET	undefined	/employees
