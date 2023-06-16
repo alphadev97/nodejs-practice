@@ -1,7 +1,8 @@
 import http from "http";
 import myName from "./features.js";
+import { myName1, myName2 } from "./features.js";
 
-console.log(myName);
+console.log(myName, myName1, myName2);
 
 const server = http.createServer((req, res) => {
   if (req.url === "/about") {
