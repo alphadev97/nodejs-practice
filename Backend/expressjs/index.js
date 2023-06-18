@@ -1,8 +1,11 @@
 import express from "express";
 const app = express();
 
+// Setting up View Engine
+app.set("view engine", "ejs");
+
 app.get("/", (req, res) => {
-  res.sendStatus(404);
+  res.render("index", { name: "Muhammad Usama" });
 });
 
 app.listen(5000, () => {
