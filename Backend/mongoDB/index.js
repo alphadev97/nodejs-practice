@@ -19,8 +19,6 @@ const Message = mongoose.model("Message", messageSchema);
 
 const app = express();
 
-const users = [];
-
 // Using middlewares
 app.use(express.static(path.join(path.resolve(), "public")));
 app.use(express.urlencoded({ extended: true }));
@@ -33,19 +31,20 @@ app.get("/", (req, res) => {
 });
 
 // MongoDB
-app.get("/add", (req, res) => {
-  Message.create({ name: "Usama", email: "Sample@gmail.com" }).then(() => {
-    res.send("Running MongoDB");
-  });
-});
+// app.get("/add", async (req, res) => {
+//   await Message.create({ name: "Usama", email: "Sample@gmail.com" });
+//   res.send("Running MongoDB");
+// });
 
 // Success Route
 app.get("/success", (req, res) => {
   res.render("success");
 });
 
-app.post("/contact", (req, res) => {
-  users.push({ username: req.body.name, email: req.body.email });
+app.post("/contact", async (req, res) => {
+  const { name, email } = req.body;
+  await Message.create({ name, email });
+
   // res.render("success");
   res.redirect("/success");
 });
