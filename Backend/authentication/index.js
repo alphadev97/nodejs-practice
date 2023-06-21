@@ -37,7 +37,7 @@ const isAuthenticated = async (req, res, next) => {
     req.user = await User.findById(decoded._id);
     next();
   } else {
-    res.render("login");
+    res.redirect("/login");
   }
 };
 
@@ -45,8 +45,20 @@ app.get("/", isAuthenticated, (req, res) => {
   res.render("logout", { name: req.user.name });
 });
 
+app.get("/login", (req, res) => {
+  res.render("login");
+});
+
 app.get("/register", (req, res) => {
   res.render("register");
+});
+
+app.post("/login", async (req, res) => {
+  const { email, password } = req.body;
+
+  let user = await User.findOne({ email });
+
+  if (!user) return res.redirect("/register");
 });
 
 app.post("/register", async (req, res) => {
