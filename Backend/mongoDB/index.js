@@ -1,5 +1,22 @@
 import express from "express";
 import path from "path";
+import mongoose from "mongoose";
+
+// Database Connection using mongoose
+mongoose
+  .connect("mongodb://localhost:27017", {
+    dbName: "Backend",
+  })
+  .then(() => console.log("Database Connected"))
+  .catch((e) => console.log(e));
+
+const messageSchema = new mongoose.Schema({
+  name: String,
+  email: String,
+});
+
+const Message = mongoose.model("Message", messageSchema);
+
 const app = express();
 
 const users = [];
@@ -13,6 +30,13 @@ app.set("view engine", "ejs");
 
 app.get("/", (req, res) => {
   res.render("index", { name: "Muhammad Usama" });
+});
+
+// MongoDB
+app.get("/add", (req, res) => {
+  Message.create({ name: "Usama", email: "Sample@gmail.com" }).then(() => {
+    res.send("Running MongoDB");
+  });
 });
 
 // Success Route
