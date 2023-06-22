@@ -3,6 +3,7 @@ import path from "path";
 import mongoose from "mongoose";
 import cookieParser from "cookie-parser";
 import jwt from "jsonwebtoken";
+import bcrypt from "bcrypt";
 
 // Database Connection using mongoose
 mongoose
@@ -60,7 +61,7 @@ app.post("/login", async (req, res) => {
 
   if (!user) return res.redirect("/register");
 
-  const isMatch = user.password === password;
+  const isMatch = await bcrypt.compare(password, user.password);
 
   if (!isMatch)
     return res.render("login", { email, message: "Password is incorrect!" });
@@ -83,7 +84,9 @@ app.post("/register", async (req, res) => {
     return res.redirect("/login");
   }
 
-  user = await User.create({ name, email, password });
+  const hashedPassword = await bcrypt.hash(password, 10);
+
+  user = await User.create({ name, email, password: hashedPassword });
 
   const token = jwt.sign({ _id: user._id }, "dfsfdsfsffaf");
 
