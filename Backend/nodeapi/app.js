@@ -28,6 +28,12 @@ app.get("/", (req, res) => {
 app.get("/users/all", async (req, res) => {
   const users = await User.find({});
 
+  console.log(req.query);
+
+  const keyword = req.query.keyword;
+
+  console.log(keyword);
+
   res.json({
     success: true,
     users,
@@ -42,9 +48,19 @@ app.post("/users/new", async (req, res) => {
     password,
   });
 
-  res.json({
+  res.status(201).cookie("tempi", "lol").json({
     success: true,
     message: "Register Successfully",
+  });
+});
+
+app.get("/", async (req, res) => {
+  const { id } = req.body;
+  const user = await User.findById(id);
+
+  res.json({
+    success: true,
+    user,
   });
 });
 
