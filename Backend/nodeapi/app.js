@@ -3,6 +3,9 @@ import mongoose from "mongoose";
 
 const app = express();
 
+// Using Middleware
+app.use(express.json());
+
 mongoose
   .connect("mongodb://localhost:27017", {
     dbName: "backendapi",
@@ -32,10 +35,11 @@ app.get("/users/all", async (req, res) => {
 });
 
 app.post("/users/new", async (req, res) => {
+  const { name, email, password } = req.body;
   await User.create({
-    name: "Usama",
-    email: "g@gmail.com",
-    password: "gsdfgsgsdgs",
+    name,
+    email,
+    password,
   });
 
   res.json({
