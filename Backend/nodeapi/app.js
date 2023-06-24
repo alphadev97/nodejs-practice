@@ -54,13 +54,14 @@ app.post("/users/new", async (req, res) => {
   });
 });
 
-app.get("/", async (req, res) => {
-  const { id } = req.body;
-  const user = await User.findById(id);
+app.get("/userid/:id", async (req, res) => {
+  const { id } = req.query;
+  // const user = await User.findById(id);
+  console.log(req.params);
 
   res.json({
     success: true,
-    user,
+    user: {},
   });
 });
 
