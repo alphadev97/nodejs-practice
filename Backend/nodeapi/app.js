@@ -54,14 +54,20 @@ app.post("/users/new", async (req, res) => {
   });
 });
 
+app.get("/userid/special", (req, res) => {
+  res.json({
+    success: true,
+    message: "Just Playing",
+  });
+});
+
 app.get("/userid/:id", async (req, res) => {
-  const { id } = req.query;
-  // const user = await User.findById(id);
-  console.log(req.params);
+  const { id } = req.params;
+  const user = await User.findById(id);
 
   res.json({
     success: true,
-    user: {},
+    user,
   });
 });
 
