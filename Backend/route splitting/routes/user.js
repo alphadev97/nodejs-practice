@@ -1,51 +1,19 @@
 import express from "express";
+import {
+  getAllUsers,
+  getUserDetails,
+  register,
+  specialFunc,
+} from "../controllers/user.js";
 
 const router = express.Router();
 
-router.get("/users/all", async (req, res) => {
-  const users = await User.find({});
+router.get("/all", getAllUsers);
 
-  console.log(req.query);
+router.post("/new", register);
 
-  const keyword = req.query.keyword;
+router.get("/userid/special", specialFunc);
 
-  console.log(keyword);
-
-  res.json({
-    success: true,
-    users,
-  });
-});
-
-app.post("/users/new", async (req, res) => {
-  const { name, email, password } = req.body;
-  await User.create({
-    name,
-    email,
-    password,
-  });
-
-  res.status(201).cookie("tempi", "lol").json({
-    success: true,
-    message: "Register Successfully",
-  });
-});
-
-app.get("/userid/special", (req, res) => {
-  res.json({
-    success: true,
-    message: "Just Playing",
-  });
-});
-
-app.get("/userid/:id", async (req, res) => {
-  const { id } = req.params;
-  const user = await User.findById(id);
-
-  res.json({
-    success: true,
-    user,
-  });
-});
+router.get("/userid/:id", getUserDetails);
 
 export default router;
