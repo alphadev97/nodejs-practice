@@ -1,10 +1,12 @@
 import express from "express";
 import userRouter from "./routes/user.js";
-import { connectDB } from "./data/database.js";
+import { config } from "dotenv";
 
 export const app = express();
 
-connectDB();
+config({
+  path: "./data/config.env",
+});
 
 // Using Middleware
 app.use(express.json());
