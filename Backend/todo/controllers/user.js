@@ -45,4 +45,9 @@ export const register = async (req, res) => {
   sendCookie(user, res, "Register Successfully", 201);
 };
 
-export const getUserDetails = async (req, res) => {};
+export const getMyProfile = (req, res) => {
+  res.status(200).json({
+    success: true,
+    user: req.user,
+  });
+};
