@@ -51,3 +51,13 @@ export const getMyProfile = (req, res) => {
     user: req.user,
   });
 };
+
+export const logout = (req, res) => {
+  res
+    .status(200)
+    .cookie("token", "", { expires: new Date(Date.now()) })
+    .json({
+      success: true,
+      user: req.user,
+    });
+};
